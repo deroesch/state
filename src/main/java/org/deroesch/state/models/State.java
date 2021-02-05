@@ -7,6 +7,9 @@ import java.util.Optional;
 
 import lombok.NonNull;
 
+/**
+ * States as an enumerated type.
+ */
 public enum State {
     PA("Pennsylvania", "PA"), CA("California", "CA"), OK("Okalhoma", "OK");
 
@@ -39,6 +42,8 @@ public enum State {
      * @return
      */
     public static Optional<State> getOne(@NonNull String longName) {
+
+        // Experiment with Optional<T>s
         return Optional.ofNullable(getAll().get(longName));
     }
 
